@@ -1,7 +1,10 @@
 # Cuisine
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a simple UI that provides the following components:
+
+Recipe - A basic recipe database
+Schedule - A basic schedule (with events that can be connected to recipes)
+List - A basic list application which can generate shopping lists from the schedule and recipes services
 
 ## Prerequisites
 
@@ -50,4 +53,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
