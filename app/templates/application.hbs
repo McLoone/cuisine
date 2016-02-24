@@ -1,18 +1,37 @@
-<div id="header">
-  <h2 id="title">Welcome to Cuisine</h2>
-  <p>A basic interface to help you automate your meals and food purchases.</p>
-</div>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
 
-<div id="navigation">
-  Recipes<br>
-  Schedule<br>
-  List
-</div>
+      {{#link-to "index" class="navbar-brand"}}Cuisine{{/link-to}}
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        {{#link-to "index" tagName="li" href=false}}<a {{bind-attr href="view.href"}}>Home</a>{{/link-to}}
+        {{#link-to "recipes" tagName="li" href=false}}<a {{bind-attr href="view.href"}}>Recipes</a>{{/link-to}}
+        {{#link-to "schedule" tagName="li" href=false}}<a {{bind-attr href="view.href"}}>Schedule</a>{{/link-to}}
+        {{#link-to "checklist" tagName="li" href=false}}<a {{bind-attr href="view.href"}}>Checklist</a>{{/link-to}}
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<div id="content">
+<div class="container theme-showcase" role="main">
+  <div class="jumbotron">
+    <h1 class="header-heading">Welcome to Cuisine</h1>
+    <p>A basic interface to help you automate your meals and food purchases.</p>
+  </div>
   {{outlet}}
 </div>
 
-<div id="footer">
-  Copyright © McLoone.org
+<div class="footer">
+  <div class="container">
+    &copy; Copyright 2015
+  </div>
 </div>
