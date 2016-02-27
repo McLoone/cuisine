@@ -19,7 +19,10 @@ export default function() {
   this.get('/recipes', function(db, request) {
     return {
       data: db.recipes.map(attrs => (
-          { type: 'recipe', id: attrs.id, attributes: attrs }
+          {
+            type: 'recipe',
+            id: attrs.id,
+            attributes: attrs }
       ))
     };
   });
@@ -30,7 +33,7 @@ export default function() {
       data: {
         type: 'recipe',
         id: id,
-        attributes: db.recipe.find(id)
+        attributes: db.recipes.find(id)
       }
     };
   });
