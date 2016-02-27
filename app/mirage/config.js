@@ -1,3 +1,5 @@
+import Mirage from 'ember-cli-mirage';
+
 export default function() {
 
   // These comments are here to help you get started. Feel free to delete them.
@@ -16,7 +18,7 @@ export default function() {
   /*
     Route shorthand cheatsheet
   */
-  this.get('/recipes', function(db, request) {
+  this.get('/recipes', (db, request) => {
     return {
       data: db.recipes.map(attrs => (
           {
@@ -27,7 +29,7 @@ export default function() {
     };
   });
 
-  this.get('/recipes/:id', function(db, request) {
+  this.get('/recipes/:id', (db, request) => {
     var id = request.params.id;
     return {
       data: {
@@ -37,6 +39,13 @@ export default function() {
       }
     };
   });
+
+this.del('recipes/:id', (db, request) => {
+  let id = request.params.id;
+  db.recipes.remove(id);
+
+  return new Mirage.Response(204, {}, {});
+});
 
   /*
     GET shorthands

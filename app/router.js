@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('recipes', function() {
     this.route('recipe', {path: ':id'}, function() {
       this.route('show');
+      this.route('edit');
     });
   });
   this.route('schedule');
