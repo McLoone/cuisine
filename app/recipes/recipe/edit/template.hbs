@@ -1,3 +1,6 @@
-Edit
-Id: {{model.id}}<br/>
-Description: {{model.description}}
+<h1>Edit Post</h1>
+<p>Id: {{model.id}}</p>
+<p>Description: {{input size=100 value=model.description}}</p>
+
+<button {{action 'save'}}>Save</button>
+<button {{action 'cancel'}}>Cancel</button>

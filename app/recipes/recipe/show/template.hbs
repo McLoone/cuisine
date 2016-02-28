@@ -1,4 +1,5 @@
 <p>Id: {{model.id}}</p>
 <p>Description: {{model.description}}</p>
 
+{{#link-to 'recipes.recipe.edit' model.id tagName="button"}}Edit{{/link-to}}
 <button {{action 'delete'}}>Delete</button>

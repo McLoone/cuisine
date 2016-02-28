@@ -47,6 +47,12 @@ this.del('recipes/:id', (db, request) => {
   return new Mirage.Response(204, {}, {});
 });
 
+this.patch('recipes/:id', (db, request) => {
+  db.recipes.update(request.params);
+
+  return new Mirage.Response(204, {}, {});
+});
+
   /*
     GET shorthands
 
