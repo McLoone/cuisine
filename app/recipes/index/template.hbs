@@ -1,0 +1,10 @@
+<p>Here you have a lot of recipes</p>
+<ul>
+  {{#each model as |recipe|}}
+    <li>
+      {{#link-to 'recipes.recipe.show' recipe.id}}
+        {{recipe.description}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ul>
